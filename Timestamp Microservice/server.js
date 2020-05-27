@@ -54,6 +54,7 @@ app.get("/api/timestamp/:date_string?", function(req, res) {
   //if user put a valid date or unix value
   if (utc !== "Invalid Date") {
     res.json({
+      //convert param from string to integer
       unix: parseInt(param),
       utc
     });
